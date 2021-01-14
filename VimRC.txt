@@ -1,0 +1,7 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+set backspace=indent,eol,start
+:colorscheme gruvbox
+set bg=dark
+set tabstop=4
