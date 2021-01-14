@@ -1,0 +1,9 @@
+List of plugins to install using pathogen:
+-> GruvBox
+-> Deoplete
+-> YouCompleteMe
+-> Unimpaired
+-> vim-css-color
+-> Delimitmate
+-> NERD Tree
+-> JavaComplete
