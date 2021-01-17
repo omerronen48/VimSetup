@@ -3,16 +3,21 @@
 echo "Installing HomeBrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Installing OhMyZSH..."
+sleep 3
+brew install zsh
+sleep 3
+brew install vim
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "Installing PL10K..."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sleep 3
 echo "Copying zshrc..."
 cat zshRC.txt >> ~/.zshrc
-brew install vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo "Copying vimrc..."
 cat VimRC.txt >> ~/.vimrc
+sleep 3
 echo "Installing vim plugins..."
 cd ~/.vim/bundle
 git clone https://github.com/morhetz/gruvbox
