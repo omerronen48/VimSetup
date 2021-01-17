@@ -1,3 +1,12 @@
+echo "Installing HomeBrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Installing zsh..."
+brew install zsh
+echo "Installing OhMyZSH..."
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Installing PL10K..."
+cd ~
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 cat zshRC.txt >> ~/.zshrc
 echo "Copying zshrc..."
 brew install vim
