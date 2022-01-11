@@ -1,0 +1,24 @@
+#Brazil Aliases
+alias bb="brazil-build"
+alias bsync="brazil ws sync"
+alias bvs="brazil ws use -vs"
+alias bshow="brazil ws show"
+alias mw="mwinit"
+alias k="kinit"
+alias mwk="mwinit && kinit"
+
+#Cloud Desktop Aliases
+alias nsync="ninja-dev-sync"
+alias devdesk="ssh dev-dsk-oronen-2c-9cd89d96.us-west-2.amazon.com"
+
+#Bit Aliases
+alias bs="bit status"
+alias ba="bit add"
+alias brm="bit rm"
+alias bdiff="bit diff"
+alias bc="bit commit"
+alias bp="bit post"
+
+source ~/BitScripts/envsetup.sh
+
+bit cw tda

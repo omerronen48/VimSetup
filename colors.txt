@@ -1,0 +1,8 @@
+foreground: 35ee32
+background: 052128
+bold: YES
+links: 192af2
+selection: 3293ee
+selected text: 669b50
+badge: NO
+tab color: NO
