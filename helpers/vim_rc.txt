@@ -1,3 +1,4 @@
+" Plugins!!!!!
 call plug#begin()
 
 " GruvBox aka the best colorscheme
@@ -7,6 +8,8 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 
 " CoC for autocomplete and stuff
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ALE for linting and style
@@ -24,15 +27,30 @@ Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
+" Default shit for shits
 syntax on
+set noerrorbells
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set incsearch
 filetype plugin indent on
 set backspace=indent,eol,start
 colorscheme gruvbox
 set bg=dark
-set tabstop=4
+set tabstop=4 softtabstop=4
 
-" Shift+L to toggle nerdtree if needed
-nnoremap <S-l> :NERDTreeToggle<CR>
+" Leaders are SPACES
+let mapleader=" "
 
-" \ + F for fzf gang
+" Help us with searching stuff
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
+
+" Space+T to toggle nerdtree if needed
+nnoremap <leader>t :NERDTreeToggle<CR>
+
+" Space+F for fzf gang
 nnoremap <silent> <Leader>f :Rg<CR>
