@@ -1,9 +1,38 @@
-execute pathogen#infect()
+call plug#begin()
+
+" GruvBox aka the best colorscheme
+Plug 'morhetz/gruvbox'
+
+" NerdTree which doesn't get used cuz of fzf but is still clutch
+Plug 'scrooloose/nerdtree'
+
+" CoC for autocomplete and stuff
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" ALE for linting and style
+Plug 'w0rp/ale'
+
+" FZF to be a god and never leave vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" NEVER forget bracket pairs again
+Plug 'jiangmiao/auto-pairs'
+
+" If I ever have the supreme misfortune to write markdown
+Plug 'plasticboy/vim-markdown'
+
+call plug#end()
+
 syntax on
 filetype plugin indent on
 set backspace=indent,eol,start
-:colorscheme gruvbox
+colorscheme gruvbox
 set bg=dark
 set tabstop=4
 
+" Shift+L to toggle nerdtree if needed
 nnoremap <S-l> :NERDTreeToggle<CR>
+
+" \ + F for fzf gang
+nnoremap <silent> <Leader>f :Rg<CR>

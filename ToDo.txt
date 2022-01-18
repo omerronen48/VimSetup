@@ -1,3 +1,4 @@
+-> Setup ALE
 -> add more plugins for VIM
 -> more aliases for ZSH
 -> Scripts that install plugins and aliases

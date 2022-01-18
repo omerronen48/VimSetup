@@ -25,26 +25,20 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
 sleep 1
 cat ../helpers/zsh_ext.txt >> ~/.zshrc
 
-echo "Installing pathogen..."
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+sleep 4
+
+echo "Installing ripgrep"
+brew install ripgrep
+
+sleep 3
+
+echo "Installing vim-plug..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Copying vimrc..."
 cat ../helpers/vim_rc.txt >> ~/.vimrc
 sleep 1
-
-echo "Installing vim plugins..."
-cd ~/.vim/bundle
-git clone https://github.com/morhetz/gruvbox
-git clone https://github.com/shougo/deoplete.nvim
-git clone https://github.com/valloric/youcompleteme
-git clone https://github.com/tpope/vim-unimpaired
-git clone https://github.com/ap/vim-css-color
-git clone https://github.com/raimondi/delimitmate
-git clone https://github.com/scrooloose/nerdtree
-git clone https://github.com/vim-scripts/javacomplete
-
-sleep 5
 
 exec zsh
 
