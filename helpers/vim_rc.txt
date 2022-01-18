@@ -5,3 +5,5 @@ set backspace=indent,eol,start
 :colorscheme gruvbox
 set bg=dark
 set tabstop=4
+
+nnoremap <S-l> :NERDTreeToggle<CR>
