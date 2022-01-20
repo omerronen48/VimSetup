@@ -1,3 +1,7 @@
+" Setting vim cursor because we are boujee
+let &t_SI="\e[6 q"
+let &t_EI="\e[2 q"
+
 " Plugins!!!!!
 call plug#begin()
 
@@ -25,15 +29,27 @@ Plug 'jiangmiao/auto-pairs'
 " If I ever have the supreme misfortune to write markdown
 Plug 'plasticboy/vim-markdown'
 
+" Undo tree
+Plug 'mbbill/undotree'
+
 call plug#end()
 
 " Default shit for shits
 syntax on
+set exrc
 set noerrorbells
 set shiftwidth=4
 set expandtab
 set smartindent
+set relativenumber
 set nu
+set nowrap
+set smartcase
+set signcolumn=yes
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 set incsearch
 filetype plugin indent on
 set backspace=indent,eol,start
@@ -52,5 +68,12 @@ endif
 " Space+T to toggle nerdtree if needed
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-" Space+F for fzf gang
+" Space+F for fzf 
 nnoremap <silent> <Leader>f :Rg<CR>
+
+" Space+u for undo tree
+nnoremap <leader>u :UndotreeToggle<CR>
+
+" CoC maps
+nmap <leader>. <Plug>(coc-definition)
+nmap <leader>r <Plug>(coc-references)
