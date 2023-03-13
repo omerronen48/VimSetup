@@ -2,3 +2,9 @@
 -> add more plugins for VIM
 -> more aliases for ZSH
 -> Scripts that install plugins and aliases
+-> add exa, cmatrix, and toilet to brew install
+-> source shel after installing brew
+-> download menslo font
+-> download vscode, rust, and rust-analyzer
+-> install node js
+-> run PlugInstall on vim
